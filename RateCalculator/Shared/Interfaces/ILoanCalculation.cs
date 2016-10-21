@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Interfaces
 {
-    public interface ILoanCalulation
+    public interface ILoanCalculation
     {
         /// <summary>
         /// Calculates the loan with the best rate based on the lenders given and amount requested

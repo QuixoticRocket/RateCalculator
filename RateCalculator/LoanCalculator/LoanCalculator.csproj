@@ -47,9 +47,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LenderFileReader\LenderFileReader.csproj">
+      <Project>{46bfd556-09d2-49a5-b504-e6e1f1b6bf2e}</Project>
+      <Name>LenderFileReader</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Shared\Shared.csproj">
       <Project>{b3cd70dd-e48a-43a5-8a3e-ea9662f131f5}</Project>
       <Name>Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleFileLogger\SimpleFileLogger.csproj">
+      <Project>{b45f24ff-3c35-425e-b8c4-79bc5726b289}</Project>
+      <Name>SimpleFileLogger</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

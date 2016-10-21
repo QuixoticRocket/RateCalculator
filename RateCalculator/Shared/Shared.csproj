@@ -44,7 +44,7 @@
     <Compile Include="DataTranferObjects\LenderDTO.cs" />
     <Compile Include="DataTranferObjects\LoanInformationDTO.cs" />
     <Compile Include="Interfaces\ILenderDataReader.cs" />
-    <Compile Include="Interfaces\ILoanCalulation.cs" />
+    <Compile Include="Interfaces\ILoanCalculation.cs" />
     <Compile Include="Interfaces\ILogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
