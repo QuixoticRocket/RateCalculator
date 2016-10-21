@@ -8,5 +8,20 @@ namespace LoanCalculator.Calculations
 {
     internal abstract class BaseCalculation
     {
+        /// <summary>
+        /// calculates the total repayable at the end term of the loan using compound interest
+        /// </summary>
+        /// <param name="principalAmount">the initial loan amount</param>
+        /// <param name="rate">annual rate of interest</param>
+        /// <param name="numberOfAnnualCompoundPoints">number of times the interest is compounded per year</param>
+        /// <param name="loanLengthInMonths">length of the loan in month</param>
+        /// <returns></returns>
+        internal decimal CalculateCompoundInterest(decimal principalAmount, decimal rate, int numberOfAnnualCompoundPoints, int loanLengthInMonths)
+        {
+            double lengthOfLoanInYears = loanLengthInMonths / 12;
+            decimal rateOverCompoundPoints = rate / numberOfAnnualCompoundPoints;
+
+            return principalAmount * (decimal)Math.Pow((double)(1 + rateOverCompoundPoints), (numberOfAnnualCompoundPoints * lengthOfLoanInYears));
+        }
     }
 }

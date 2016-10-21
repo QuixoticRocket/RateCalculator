@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace LoanCalculator
 {
+    internal enum CalculationTypes
+    {
+        ThirtySixMonth,
+    }
+
     internal class LoanCalculationFactory
     {
+
     }
 }

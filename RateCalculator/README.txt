@@ -37,6 +37,9 @@ We would normally use ConfigurationManager & config files, or a db query to retr
 We would usually be using something like Autofac to create IoC containers, but we're keeping things simple and manual for this. 
  If this were production code we'd have config variable for environments setting things such as which lender loader to use and the appropriate settings for that loader.
 
+I assume we calculate the total amount required to be paid back by the end of the loan and then divide by the number of months to get the monthly repayments,
+ and we're not providing information about early repayment etc.
+
 --
 
 The happy path through the code will be: 
