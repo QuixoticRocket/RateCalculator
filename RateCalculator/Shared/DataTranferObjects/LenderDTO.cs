@@ -8,8 +8,8 @@ namespace Shared.DataTranferObjects
 {
     public struct LenderDTO
     {
-        string Name;
-        decimal Rate;
-        decimal Available;
+        public string Name;
+        public decimal Rate;
+        public decimal Available;
     }
 }

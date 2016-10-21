@@ -8,9 +8,9 @@ namespace Shared.DataTranferObjects
 {
     public struct LoanInformationDTO
     {
-        decimal AmountRequested;
-        decimal Rate;
-        decimal MonthlyRepayment;
-        decimal TotalRepayment;
+        public decimal AmountRequested;
+        public decimal Rate;
+        public decimal MonthlyRepayment;
+        public decimal TotalRepayment;
     }
 }
