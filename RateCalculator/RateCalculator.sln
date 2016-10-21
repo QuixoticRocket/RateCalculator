@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanCalculator", "LoanCalcu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{B1798A2D-3061-43B1-8245-DF14E9521F77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFileLogger", "SimpleFileLogger\SimpleFileLogger.csproj", "{B45F24FF-3C35-425E-B8C4-79BC5726B289}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{B1798A2D-3061-43B1-8245-DF14E9521F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1798A2D-3061-43B1-8245-DF14E9521F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1798A2D-3061-43B1-8245-DF14E9521F77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B45F24FF-3C35-425E-B8C4-79BC5726B289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45F24FF-3C35-425E-B8C4-79BC5726B289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45F24FF-3C35-425E-B8C4-79BC5726B289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45F24FF-3C35-425E-B8C4-79BC5726B289}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

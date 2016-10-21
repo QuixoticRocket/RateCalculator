@@ -33,3 +33,14 @@ Interfaces and utilities will live in a shared dll.
 
 Any configuration values required (although none stand out at first read) will go into a public static class. 
 We would normally use ConfigurationManager & config files, or a db query to retreive them (and possiblt caching) but for simplicity and time's sake I'll go with the simpler option for now.
+
+We would usually be using something like Autofac to create IoC containers, but we're keeping things simple and manual for this. 
+ If this were production code we'd have config variable for environments setting things such as which lender loader to use and the appropriate settings for that loader.
+
+--
+
+The happy path through the code will be: 
+  Console app receives arguments. 
+  Creates a LoanCalculator with those arguments. 
+  The calculator will create a filereader and then uses the factory to get back the appropriate calculation, and then uses the calculation to compute the result, which it returns.
+  A logger will dump any errors to an error txt log file (this is simplistic and error prone, but keeping things simple for the test. we could use something like log4net or nlog to do this)

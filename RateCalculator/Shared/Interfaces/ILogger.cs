@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LenderFileReader
+namespace Shared.Interfaces
 {
-    public class Class1
+    public interface ILogger
     {
     }
 }
