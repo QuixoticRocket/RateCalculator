@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Shared.DataTranferObjects
 {
-    public struct LenderDTO
+    public struct LoanInformationDTO
     {
-        string Name;
+        decimal AmountRequested;
         decimal Rate;
-        decimal Available;
+        decimal MonthlyRepayment;
+        decimal TotalRepayment;
     }
 }
