@@ -15,12 +15,12 @@ namespace LoanCalculator
 
     internal class LoanCalculationFactory
     {
-        internal static ILoanCalculation GetCalculation(CalculationTypes typeOfCalculation)
+        internal static ILoanCalculation GetCalculation(CalculationTypes typeOfCalculation, ILogger logger)
         {
             switch (typeOfCalculation)
             {
                 case CalculationTypes.ThirtySixMonth:
-                    return new Calculation36Months();
+                    return new Calculation36Months(logger);
                     break;
                 default:
                     throw new NotSupportedException("The requested calculation type is not supported yet");

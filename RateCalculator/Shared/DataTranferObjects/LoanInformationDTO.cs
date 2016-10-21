@@ -12,5 +12,6 @@ namespace Shared.DataTranferObjects
         public decimal Rate;
         public decimal MonthlyRepayment;
         public decimal TotalRepayment;
+        public decimal AmountAvailable;
     }
 }

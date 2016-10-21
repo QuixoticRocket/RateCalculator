@@ -12,15 +12,25 @@ namespace LoanCalculator
     {
         public static LoanInformationDTO CalculateLoan(string lenderFilename, decimal loanAmount)
         {
-            ILoanCalculation calculation = LoanCalculationFactory.GetCalculation(CalculationTypes.ThirtySixMonth);
             ILogger logger = new SimpleFileLogger.FileLogger();
-            ILenderDataReader lenderloader = new LenderFileReader.LenderFileReader(lenderFilename, logger);
 
-            List<LenderDTO> lenderList = lenderloader.LoadAllLenders();
+            try
+            {
+                ILoanCalculation calculation = LoanCalculationFactory.GetCalculation(CalculationTypes.ThirtySixMonth, logger);
+                ILenderDataReader lenderloader = new LenderFileReader.LenderFileReader(lenderFilename, logger);
 
-            LoanInformationDTO result = calculation.CalculateBestRateLoan(lenderList, loanAmount);
+                List<LenderDTO> lenderList = lenderloader.LoadAllLenders();
 
-            return result;
+                LoanInformationDTO result = calculation.CalculateBestRateLoan(lenderList, loanAmount);
+
+                return result;
+            }
+            catch(Exception e)
+            {
+                logger.Fatal(e.ToString());
+            }
+
+            return new LoanInformationDTO();
         }
     }
 }
