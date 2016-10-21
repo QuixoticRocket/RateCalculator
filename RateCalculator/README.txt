@@ -47,3 +47,11 @@ The happy path through the code will be:
   Creates a LoanCalculator with those arguments. 
   The calculator will create a filereader and then uses the factory to get back the appropriate calculation, and then uses the calculation to compute the result, which it returns.
   A logger will dump any errors to an error txt log file (this is simplistic and error prone, but keeping things simple for the test. we could use something like log4net or nlog to do this)
+
+--
+known issue - a heading line in the csv file will log as a bad line
+
+--
+I've probably spent a little over 3 hours on this with breaks to fix a VS GitHub extension issue and Lunch
+
+I'd love feedback on this code even if you're not considering me as criticism can only make me a better developer. Thanks. 
