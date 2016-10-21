@@ -18,10 +18,10 @@ namespace LoanCalculator.Calculations
         /// <returns></returns>
         internal decimal CalculateCompoundInterest(decimal principalAmount, decimal rate, int numberOfAnnualCompoundPoints, int loanLengthInMonths)
         {
-            double lengthOfLoanInYears = loanLengthInMonths / 12;
+            decimal lengthOfLoanInYears = loanLengthInMonths / (decimal)12;
             decimal rateOverCompoundPoints = rate / numberOfAnnualCompoundPoints;
 
-            return principalAmount * (decimal)Math.Pow((double)(1 + rateOverCompoundPoints), (numberOfAnnualCompoundPoints * lengthOfLoanInYears));
+            return principalAmount * (decimal)Math.Pow(Convert.ToDouble(1 + rateOverCompoundPoints), Convert.ToDouble(numberOfAnnualCompoundPoints * lengthOfLoanInYears));
         }
     }
 }
