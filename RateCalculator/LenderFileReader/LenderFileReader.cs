@@ -76,10 +76,23 @@ namespace LenderFileReader
                         logger.Critical(string.Format("Error converting rate on line {0} from file {1}", lineNumber, filename));
                         continue;
                     }
+                    else if(lender.Rate < 0)
+                    {
+                        //negative rate? doesn't seem right. log a message and move on
+                        logger.Critical(string.Format("Negative rate found on line {0} from file {1}", lineNumber, filename));
+                        continue;
+                    }
+
                     if (!decimal.TryParse(readValues[2], out lender.Available))
                     {
                         //something has gone wrong converting values. log a message and move on
                         logger.Critical(string.Format("Error converting availability on line {0} from file {1}", lineNumber, filename));
+                        continue;
+                    }
+                    else if (lender.Available < 0)
+                    {
+                        //negative amount available? doesn't seem right. log a message and move on
+                        logger.Critical(string.Format("Negative available amount found on line {0} from file {1}", lineNumber, filename));
                         continue;
                     }
 

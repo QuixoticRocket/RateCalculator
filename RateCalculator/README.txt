@@ -26,7 +26,7 @@ If we discover bad data with a lender (negative or missing rates or availability
 I will be reading the entire file into memory and dealing with it there as I'm assuming we will not be feeding in huge files,
  and any real adaption of this would be pulling in the data from a db based on a subselection query to keep the number of in-memory objects low and performant. 
 
-We will want unit tests and a mocking framework.
+We will want unit tests and a mocking framework although testing is likely to be lean on this as there isn't much time to write all the proper testing.
 Depending on the size of the project, unit tests would normally be broken out into tests for each major section, but for this soution we'll use one project for all unit tests.
 
 Interfaces and utilities will live in a shared dll.
